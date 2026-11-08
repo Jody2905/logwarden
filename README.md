@@ -4,6 +4,8 @@
 
 Built with Java 17, Spring Boot 4, Spring Security, Spring Data JPA, Flyway and PostgreSQL.
 
+**[Live demo](https://logwarden-k2df.onrender.com)**: sign in as `analyst` / `logwarden-demo`.
+
 ![Overview](docs/overview.png)
 
 ## What it does
@@ -45,7 +47,7 @@ On that day (3,128 log lines) LogWarden raises **22 alerts, one for every step o
 
 ## Try it
 
-**Online:** *(link once deployed)*. Sign in as `analyst` / `logwarden-demo`.
+**Online:** https://logwarden-k2df.onrender.com. Sign in as `analyst` / `logwarden-demo`. It runs on Render's free plan, so the first visit takes about a minute to wake it.
 
 **On your computer** (Java 17 or newer):
 
