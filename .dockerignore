@@ -1,0 +1,7 @@
+target
+.m2repo
+.git
+.idea
+.vscode
+docs
+*.log

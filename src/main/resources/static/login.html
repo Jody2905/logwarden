@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · LogWarden</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<div class="login-wrap">
+  <form class="login" method="post" action="/login" id="form">
+    <div class="brand"><img src="/favicon.svg" alt="" width="30" height="30"> LogWarden</div>
+    <p class="tag">Security monitoring for small IT teams</p>
+    <input type="hidden" name="_csrf" id="csrf">
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" required autofocus>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+    <div id="msg" class="msg hidden" role="alert"></div>
+    <button class="btn" type="submit">Sign in</button>
+    <div class="demo">Demo: <b>analyst</b> / <b>logwarden-demo</b></div>
+  </form>
+</div>
+<script src="/login.js"></script>
+</body>
+</html>

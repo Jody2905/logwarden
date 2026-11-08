@@ -1,0 +1,22 @@
+# Render Blueprint: New → Blueprint → pick this repository.
+services:
+  - type: web
+    name: logwarden
+    runtime: docker
+    plan: free
+    region: ohio
+    healthCheckPath: /actuator/health
+    envVars:
+      # Neon connection string (postgresql://user:password@host/db?sslmode=require). Leave empty to use an in-memory demo database.
+      - key: DATABASE_URL
+        sync: false
+      # Choose your own admin password; the analyst login stays the public demo one unless you set it too.
+      - key: LOGWARDEN_ADMIN_PASSWORD
+        sync: false
+      - key: LOGWARDEN_ANALYST_PASSWORD
+        value: logwarden-demo
+      # Key for log shippers (X-API-Key header). Render makes a random one; see it under Environment.
+      - key: LOGWARDEN_API_KEY
+        generateValue: true
+      - key: LOGWARDEN_DEMO_DATA
+        value: "true"

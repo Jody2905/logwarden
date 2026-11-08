@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LogWarden</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="/favicon.svg" alt="" width="26" height="26"> LogWarden</div>
+  <nav class="nav" aria-label="Sections">
+    <a href="#/overview" data-tab="overview">Overview</a>
+    <a href="#/alerts" data-tab="alerts">Alerts</a>
+    <a href="#/events" data-tab="events">Events</a>
+    <a href="#/rules" data-tab="rules">Rules</a>
+    <a href="#/upload" data-tab="upload">Add logs</a>
+  </nav>
+  <div class="who">
+    <span id="who"></span>
+    <form method="post" action="/logout" id="logout"><input type="hidden" name="_csrf" id="logoutCsrf"><button class="btn ghost" type="submit">Sign out</button></form>
+  </div>
+</header>
+<main id="view" aria-live="polite"></main>
+<div id="toast" class="toast hidden" role="status"></div>
+<script src="/app.js"></script>
+</body>
+</html>
